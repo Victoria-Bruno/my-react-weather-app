@@ -1,0 +1,72 @@
+
+p {
+    text-align: center;
+  }
+  
+  .card-structure {
+    text-align: left;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.Weather {
+    background: #ffd6e0 !important;
+    font-family: "Prata", serif !important;
+    color: #ff3366 !important;
+    font-weight: 900;
+    height: 100%;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    margin: 0 auto;
+  }
+  
+  
+  /* .card-forecast {
+    background: #fee2b3;
+    font-family: "Prata", serif;
+    color: #ff7043;
+    font-size: 24px;
+    font-weight: 900;
+    text-align: center;
+    height: 100%;
+  } */
+
+  
+
+  
+img {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .Weather .additional-information {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .Weather a {
+    color: #ff3366;
+  }
+  
+  .Weather .weather-message {
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  
+  .Weather .btn-outline-info {
+    color: #746de0;
+    border: none;
+    transition: all 200ms ease-in-out;
+  }
+  
+  .Weather .btn-outline-info:hover {
+    color: #000;
+    background-color: #0dcaf0;
+    border-color: #0dcaf0;
+  }
+  
