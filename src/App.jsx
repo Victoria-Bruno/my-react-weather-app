@@ -7,7 +7,7 @@ function App() {
     <Search />
     <Weather />
     <br></br>
-    <div className="open-source">Open source project available on GitHub</div>
+    <div className="open-source">Open source project available on <a href="https://github.com/Victoria-Bruno/my-react-weather-app.git">GitHub</a></div>
     </div>
 }
 
