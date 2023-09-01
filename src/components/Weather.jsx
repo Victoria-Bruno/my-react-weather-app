@@ -12,7 +12,8 @@ export default function Weather() {
       humidity: 80,
       imgUrl: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
     };
-  
+
+
     return (
         <Card style={{width: "18rem"}} className="Weather">
         <Card.Body>
