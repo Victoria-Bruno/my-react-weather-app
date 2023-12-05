@@ -21,8 +21,11 @@ p {
     rgba(17, 17, 26, 0.1) 0px 0px 8px;
     margin: 0 auto;
   }
-  
-  
+   
+ .Weather .city {
+  font-size: 35px;
+ }
+
   /* .card-forecast {
     background: #fee2b3;
     font-family: "Prata", serif;
@@ -33,9 +36,6 @@ p {
     height: 100%;
   } */
 
-  
-
-  
 img {
     width: 50%;
     display: block;
@@ -48,10 +48,22 @@ img {
     margin-bottom: 1rem;
   }
 
+  .Weather .units {
+    color: #ff3366;
+    font-size: 18px;
+    position: relative;
+    top: -40px;
+    left: 33px;
+  }
+
   .Weather a {
     color: #ff3366;
   }
   
+  .Weather a:hover {
+    color: #7433ff;
+  }
+
   .Weather .weather-message {
     text-align: center;
     font-size: 30px;
