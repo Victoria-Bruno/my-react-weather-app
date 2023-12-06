@@ -50,10 +50,10 @@ img {
 
   .Weather .units {
     color: #ff3366;
-    font-size: 18px;
+    font-size: 15px;
     position: relative;
     top: -40px;
-    left: 33px;
+    left: 34px;
   }
 
   .Weather a {

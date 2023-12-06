@@ -1,9 +1,16 @@
 import { useState } from "react";
 import "../Unit/Unit.css"
+import { useEffect } from "react";
 
 const Unit = (props) => {
     const [temperature, setConversion] = useState(props.celsiusTemperature)
     const [unit, setUnit] = useState('celsius')
+
+
+    useEffect(()=>{
+        setConversion(props.celsiusTemperature)
+        setUnit('celsius')
+    },[props.celsiusTemperature])
 
     function handleSelect(selectedUnit) {
         if (selectedUnit === 'fahrenheit') {
@@ -16,6 +23,7 @@ const Unit = (props) => {
             }
     }
 
+
     return <div>
              <div className="temperature">{temperature}</div>
              <div className="units">
@@ -24,6 +32,5 @@ const Unit = (props) => {
              </div>
             </div>
 }
-
 
 export default Unit;
