@@ -8,6 +8,7 @@ import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
 import { useState } from "react";
 import axios from "axios";
 import Weather from "../Weather/Weather";
+import Forecast from "../Forecast/Forecast";
 
 
 const Search = (props) => {
@@ -20,7 +21,7 @@ const Search = (props) => {
   const showTime = weekday[date.getDay()] + ", " + date.getHours() 
       + ':' + date.getMinutes();
 
-  // Saving response data and time stamp to use in Weather.jsx
+  // Saving response data of current weather and time stamp to use in Weather.jsx
   const saveResponse = (response) => {
     setWeatherData(
       { 
@@ -31,10 +32,11 @@ const Search = (props) => {
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      time: showTime
+      time: showTime,
+      coordinates: response.data.coord
       }
     )
-    console.log(response)
+  console.log(response)
   }
 
   // Getting data from OpenWeather 
@@ -57,7 +59,9 @@ const Search = (props) => {
 
   if (weatherData.ready) {
     return (
-      <div>
+      <div className="container">
+    <div className = "row"> 
+    <div className="col">
     <Card style={{width: "18rem"}}  className="Search">
     <Form onSubmit={handleSubmit}>
       <Card.Body>
@@ -77,7 +81,16 @@ const Search = (props) => {
       </Card.Body>
     </Form>
     </Card>
+    </div>
+    </div>
+    <div className="row justify-content-end">
+    <div className="col-4">
     <Weather data={weatherData}/>
+    </div>
+    <div className="col-4">
+    <Forecast coordinates={weatherData.coordinates}/>
+    </div>
+    </div>
     </div>
     );
 } else {

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./Weather.css"
 import Card from 'react-bootstrap/Card';
 import Unit from "../Unit/Unit";
